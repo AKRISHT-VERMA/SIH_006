@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Northeast India Landslide Early Warning
+    </title>
+
+
+    <!-- Leaflet CSS -->
+
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+
+    <!-- Our CSS -->
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ============================= -->
+    <!-- HEADER -->
+    <!-- ============================= -->
+
+    <header>
+
+        <div>
+
+            <h1>
+                Northeast India
+                Landslide Early Warning
+            </h1>
+
+            <p>
+                AI-powered landslide risk monitoring
+            </p>
+
+        </div>
+
+        <div id="status">
+            Loading risk data...
+        </div>
+
+    </header>
+
+
+
+    <!-- ============================= -->
+    <!-- MAIN CONTENT -->
+    <!-- ============================= -->
+
+    <main>
+
+
+        <!-- MAP -->
+
+        <div id="map"></div>
+
+
+        <!-- SIDE PANEL -->
+
+<aside id="panel">
+
+    <h2>Risk Information</h2>
+
+
+    <!-- ========================= -->
+    <!-- FILTERS -->
+    <!-- ========================= -->
+
+    <div class="filters">
+
+        <label for="stateFilter">
+            State
+        </label>
+
+        <select id="stateFilter">
+            <option value="ALL">
+                All States
+            </option>
+        </select>
+
+
+        <label for="districtFilter">
+            District
+        </label>
+
+        <select id="districtFilter">
+            <option value="ALL">
+                All Districts
+            </option>
+        </select>
+
+
+        <label for="riskFilter">
+            Risk Level
+        </label>
+
+        <select id="riskFilter">
+
+            <option value="ALL">
+                All Risk Levels
+            </option>
+
+            <option value="LOW">
+                LOW
+            </option>
+
+            <option value="MODERATE">
+                MODERATE
+            </option>
+
+            <option value="HIGH">
+                HIGH
+            </option>
+
+            <option value="VERY HIGH">
+                VERY HIGH
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- LOCATION DETAILS -->
+    <!-- ========================= -->
+
+    <div id="details">
+
+        <p>
+            Click a location on the map
+            to view its risk.
+        </p>
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- LEGEND -->
+    <!-- ========================= -->
+
+    <div class="legend">
+
+        <h3>Risk Level</h3>
+
+        <p>
+            <span class="dot low"></span>
+            LOW
+        </p>
+
+        <p>
+            <span class="dot moderate"></span>
+            MODERATE
+        </p>
+
+        <p>
+            <span class="dot high"></span>
+            HIGH
+        </p>
+
+        <p>
+            <span class="dot very-high"></span>
+            VERY HIGH
+        </p>
+
+    </div>
+
+</aside>
+
+    </main>
+
+
+
+    <!-- Leaflet JS -->
+
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+    </script>
+
+
+    <!-- Our JavaScript -->
+
+    <script
+        src="/static/app.js">
+    </script>
+
+
+</body>
+
+</html>
